@@ -17,6 +17,40 @@ Use the following command to install the HTTP Router package:
 go get github.com/Li-Khan/khanRouter
 ```
 
+## Quick start
+
+```go
+package main
+
+import (
+	khanRouter "github.com/Li-Khan/khan-router"
+	"net/http"
+)
+
+func main() {
+	router := khanRouter.NewRouter()
+
+	router.RegisterRouteGET("/hello", hello).Middleware(Auth)
+
+	_ = http.ListenAndServe(":8080", router)
+}
+
+func hello(writer http.ResponseWriter, request *http.Request) {
+	_, _ = writer.Write([]byte("Li-Khan is the best programmer"))
+}
+
+func Auth(f http.Handler) http.Handler {
+	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		auth := request.Header.Get("Authentication")
+		if auth != "Li-Khan" {
+			writer.WriteHeader(http.StatusUnauthorized)
+			return
+		}
+		f.ServeHTTP(writer, request)
+	})
+}
+```
+
 # Usage
 1. Import the HTTP Router package into your Go code:
 
