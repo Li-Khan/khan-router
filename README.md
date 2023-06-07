@@ -55,7 +55,7 @@ func Auth(f http.Handler) http.Handler {
 1. Import the HTTP Router package into your Go code:
 
     ```go
-    import "github.com/Li-Khan/khanRouter"
+    import httpRouter "github.com/Li-Khan/khan-router"
     ```
 
 2. Create a new router instance:
