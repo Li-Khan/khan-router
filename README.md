@@ -114,3 +114,8 @@ router.RegisterRouteGET("/orders", getOrders).Middleware(
 ## Contributing
 
 Contributions are welcome! If you find any issues or want to enhance the HTTP Router package, feel free to open a pull request.
+
+## LICENSE
+[![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+This project is licensed under the BSD 3-Clause "New" or "Revised" License. It is a permissive open-source license that allows you to use, modify, and distribute the code, both in source and binary forms, under certain conditions.
+See the LICENSE file for details.
