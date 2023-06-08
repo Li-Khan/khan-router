@@ -14,7 +14,7 @@ Khan Router is a lightweight Go package that provides a simple and flexible HTTP
 Use the following command to install the HTTP Router package:
 
 ```sh
-go get github.com/Li-Khan/khanRouter
+go get github.com/Li-Khan/khan-router
 ```
 
 ## Quick start
